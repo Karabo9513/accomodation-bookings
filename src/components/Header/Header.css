@@ -1,0 +1,182 @@
+just center my header text img.header-logo {
+    width: 101.67px;
+height: 32.02px;
+top: -0.02px;
+left: -0.02px;
+gap: 0px;
+opacity: 0px;
+
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    background-color: black;
+    width: 100%;
+    border: none;
+    
+}
+
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 80px;
+    
+    border: none;
+    
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffff;
+}
+
+.header-links p{
+    font-size: 14px;
+}
+
+.header-links p{
+    font-size: 14px;
+}
+
+.header-links .language-icon{
+    font-size: 19px;
+}
+
+.profile-menu-icons{
+    display: flex;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 1px solid lightgray;
+    color: #ffff;
+    width: 86px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-text{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 0px;
+    flex-grow: 1;
+    color: #fff;
+ 
+}
+
+.profile-menu-icons:hover{
+    box-shadow: 3px 3px 3px 1px rbga(0, 0, 0, 0.1);
+}
+
+.profile-menu-icons .menu-icon{
+    font-size: 20px;
+}
+
+.profile-menu-icons .account-icon{
+    font-size: 32px;
+}
+
+.header-bottom{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+   
+}
+
+.search-icon{
+    display: flex;
+    padding-right: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 43px;
+    background-color: #DE3151;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+
+.header-search{
+    display: flex;
+    gap: 40px;
+    padding: 8px 8px 8px 32px;
+    border: 1px solid #f1f1f1;
+    border-radius: 1000px;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffff;
+    width: 848px;
+    height: 50px;
+    gap: 32px;
+    justify-content: space-between;
+
+}
+
+.search-hotels{
+    padding-left: 20px;
+}
+
+.search-checkin, .search-checkout, .search-guests{
+    border-left: 1px solid lightgray;
+    padding: 0 0 0 20px;
+    font-size: 12px;
+}
+
+.search-button{
+    color: #6B7280;
+    font-size: 14px;
+    border: none;
+    background-color: #ffff;
+}
+
+/* Header.css */
+
+/* General header styles */
+.header {
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  /* Default header styles */
+  .header-default {
+    background-color: black; /* Black background for non-login pages */
+    color: white; /* Default text color for readability */
+  }
+  
+  /* Login page header styles */
+  .header-login {
+    background-color: white; /* White background for login page */
+  }
+  
+  /* Default logo styles */
+  .logo-white {
+    filter: none; /* Ensure the logo is displayed in its default color */
+  }
+  
+  /* Pink logo styles */
+  .logo-pink {
+    filter: none; /* Ensure the pink logo is displayed correctly */
+  }
+  
+  /* Hide elements on the login page */
+  .header-login .header-text,
+  .header-login .header-links,
+  .header-login .header-bottom {
+    display: none;
+  }
+
+  .menu-icon {
+    color: black; /* Set the color of the MenuIcon to black */
+}
+
+.account-icon {
+    color: gray; /* Set the color of the AccountCircleIcon to gray */
+}

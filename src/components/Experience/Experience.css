@@ -1,0 +1,46 @@
+/* Container and Title */
+.Experience {
+    padding: 20px;
+    text-align: center;
+}
+
+.Experience-title {
+    font-size: 36px;
+    font-weight: bold;
+    height: 44px;
+    display: flex;
+    margin-top: 10px;
+    
+}
+
+/* Flexbox Container for the Experience Cards */
+.experience-container {
+    display: flex; /* Enables Flexbox */
+    gap: 24px; /* Adds space between the cards */
+    justify-content: center; /* Centers cards horizontally */
+    align-items: flex-start;
+    margin-top: -0px; /* Aligns cards at the top */
+
+}
+
+/* Experience Card */
+.experience-card {
+    background-color: #ffff;
+    padding: 80px; /* Padding around the image */
+    border-radius: 8px; /* Rounded corners for the card */
+    
+    display: flex;
+    justify-content: center; /* Centers the image within the card */
+    align-items: center; /* Centers the image within the card */
+   
+    margin: 0; /* No margin between cards (controlled by container gap) */
+}
+
+/* Image Style */
+.experience-card img {
+    width: 628px; /* Ensures image fits the card's width */
+    height: 628px; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+  

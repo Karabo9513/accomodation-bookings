@@ -1,0 +1,47 @@
+.Card-banner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px; /* Aligns items vertically centered */
+  }
+  
+  .Card-content {
+    flex: 1;
+    
+  }
+  
+  .Gift-image {
+    flex: 1; /* Takes up available space */
+    max-width: 854px;
+    width: 320px;
+  }
+
+  .shop-gift{
+    height: 112px;
+    width:377px;
+    gap: 24px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .Learn-button{
+    color: #ffff;
+    width: 135px;
+    height: 56px;
+    border-radius: 8px;
+    padding: 16px 24px 16px 24px;
+    gap: 8px;
+    background-color: black;
+    cursor: pointer;
+    margin-right: 550px;
+    
+  }
+
+  .question-image img{
+    text-align: center;
+    width: 1280px;
+    height: 640px;
+    border-radius: 8px;
+    padding: 80px;
+}
+  

@@ -1,0 +1,598 @@
+.accommodation-image-gallery {  
+    display: flex;  
+    flex-direction: row;  
+    max-width: 1120px;  
+    height: 400px;  
+    border-radius: 16px;  
+    gap: 8px;  
+    margin-bottom: 100px;
+  } 
+  .main-image {  
+    width: 556px; /* Set the width of the main image */  
+    height: 400px;  
+    margin-right: 20px;  
+  } 
+    
+  .thumbnail-container {  
+    display: flex;  
+    flex-wrap: wrap;  
+    
+  }
+    
+  .thumbnail-image {  
+    width: 274px; /* Set the width of each thumbnail */  
+    height: 196px !important;  
+    margin: 5px;
+  }
+
+  .accommodation-header {
+    width: 670px;
+    height: 1876px;
+    gap: 32px;
+    margin-top: 20px;
+    display: flex;  
+    justify-content: flex-end;
+   
+  }
+
+  .accommodation-description {
+    width: 670px;
+  }
+
+  .Reserve-cal {  
+    position: absolute;  
+    right: 120px;  
+    top: 630px;  
+    width: 370px;  
+    height: 670px;  
+    border-radius: 8px;  
+    border: 1px solid #e5e7eb;  
+    padding: 10px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    box-shadow: #1f2937;
+    overflow: hidden; /* add this to prevent content from overflowing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+  }  
+  .calculate-total-button {  
+    margin-top: 20px; /* add this to create space between the button and the dropdown */  
+  }  
+    
+  .guest-dropdown {  
+    margin-bottom: 40px; /* add this to create space between the dropdown and the button */  
+  }
+
+  .Reserve-cal > * {  
+    margin-bottom: 20px;  
+  }  
+  .reservation-form {  
+    width: 322px;  
+    height: 155px;  
+    border-radius: 8px;  
+    border: 1px solid;  
+    padding: 10px;  
+  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: space-between;  
+  }  
+
+  .price-per-night,  
+.check-in,  
+.check-out,  
+.guest-dropdown {  
+  margin-bottom: 10px;  
+  
+}  
+.price-per-night {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+  .check-in, .check-out {  
+    display: flex;
+    margin: 10px;
+    display: inline-block;
+    justify-content: space-between;
+
+  }
+  .date-picker-wrapper {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+  }  
+  .check-in label, .check-out label {  
+    font-weight: 600;  
+    font-size: 10px;  
+    line-height: 16px;
+    margin-bottom: 10px;  
+    display: block;  
+    font: inter;
+  }
+
+  .total-section p{  
+    padding-bottom: 15px;
+    display: flex;  
+    justify-content: space-between;
+  }
+
+  .total-section {
+    width: 322px;
+    height: 152px;
+    justify-content: space-between;
+     
+  }
+  .guest-dropdown {  
+    padding-bottom: 20px;  
+  }
+
+  .calculate-total-button {  
+    padding-top: 10px;  
+  }
+
+  .reserve-button {  
+    width: 322px;  
+    height: 44px; 
+    background-color: #de3151; 
+    color: #ffff;
+    border-radius: 8px;
+  }
+  .calculate-total-button {  
+    width: 322px;  
+    height: 44px; 
+    background-color: #de3151; 
+    color: #ffff;
+    border-radius: 8px;
+  }
+
+  .sleep {  
+    width: 670px;  
+    height: 320px;  
+    gap: 24px;  
+  }
+  .what-this-place-offers {
+    width: 670px;
+    height: 356px;
+    gap: 32px;
+    }
+    
+    .what-this-place-offers h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    
+    .amenities-columns {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .left-column, .right-column {
+    width: 45%;
+    }
+    
+    .left-column li, .right-column li {
+    margin-bottom: 10px;
+    }
+    
+    .left-column li i, .right-column li i {
+    margin-right: 10px;
+    }
+    
+    .what-this-place-offers p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: black;
+    }
+    .amenities{
+      border: 1px solid;
+      width: 178px;
+      height: 36px;
+      border-radius: 8px;
+      padding: 8px 16px 8px 16px;
+      gap: 8px;
+      color: black;
+    }
+
+    .what-this-place-offers li {  
+      display: flex;  
+      align-items: center;  
+    }  
+      
+    .what-this-place-offers li img {  
+      width: 20px;  
+      height: 20px;  
+      margin-right: 5px;  
+    }  
+      
+    .what-this-place-offers li i {  
+      margin-right: 5px;  
+    }
+
+    .date-picker-section {  
+      display: flex; 
+      width: 670px;
+      height: 452px; 
+      flex-direction: column; 
+      margin-top: 100px; 
+    }  
+      
+    .Nights-stay {  
+      width: 100%;  
+      text-align: start;  
+      margin-bottom: 20px;  
+    }  
+      
+    .date-picker-container {  
+      display: flex;  
+      justify-content: space-between;  
+      
+    }  
+      
+    .date-picker {  
+      width: 50%;  
+      margin-right: 10px;  
+    }  
+      
+    .date-picker:last-child {  
+      margin-right: 0;  
+    }
+
+    .review-categories {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .left-column, .right-column {
+      width: 48%; /* Adjust as necessary to balance the spacing */
+    }
+    
+    .category {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .category-title {
+      font-weight: bold;
+    }
+    
+    .category-score {
+      text-align: right;
+    }
+    .review-categories, .reviews-list {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .left-column, .right-column {
+      width: 48%; /* Adjust as necessary to fit */
+    }
+    
+    .category, .review-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .category-title, .reviewer-name {
+      font-weight: bold;
+    }
+    
+    .review-item {
+      flex-direction: column;
+      
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .review-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    
+    .review-text {
+      margin-top: 5px;
+    }
+
+    .review-date {
+      color: #6b7280;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .reviewer-name {
+      color: #000000;
+      font-size: 16px;
+      font: inter;
+      line-height: 24px;
+    }
+    .reviews-section {
+      width: 1120px;
+      height: 804px;
+      border-bottom: 1px solid #e5e7eb;
+
+    }
+    .show-reviews-button {
+      border: 1px solid #000000;
+      border-radius: 8px;
+      padding: 8px 16px 8px 16px;
+      width: 163px;
+      height: 36px;
+      background-color: #ffff;
+      color: #000000;
+    }
+
+    .host-section {
+      width: 1120px;
+      height: 460px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .host-heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .host-profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .host-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .host-name, .host-joined {
+      display: block;
+    }
+    
+    .host-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    
+    .host-stat {
+      width: 30%;
+    }
+    
+    .host-description {
+      margin-bottom: 15px;
+    }
+    
+    .host-description-text {
+      margin-bottom: 5px;
+      color: #6b7280;
+    }
+    
+    .host-response {
+      margin-bottom: 15px;
+    }
+    
+    .response-rate, .response-time {
+      display: block;
+    }
+    
+    .contact-host-button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    
+    .contact-host-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .payment-protection {
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+    }
+    .host-details {
+      display: flex;
+      flex-direction: column; /* Stack name and joined date vertically */
+    }
+    .response-rate {
+      color: #6b7280;
+    }
+    .response-time {
+      color:#6b7280;
+    }
+
+    .contact-host-button {
+      border: 1px solid #000000;
+      border-radius: 8px;
+      width: 150px;
+      height: 56px;
+      background-color: #ffff;
+      color: #000000;
+      padding: 16px 24px 16px 24px;
+    }
+
+    .things-to-know-section {
+      margin-bottom: 30px;
+      width: 1120px;
+      height: 360px;
+
+    }
+    
+    .things-to-know-heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .things-to-know-content {
+      display: flex;
+      justify-content: space-between; /* Spread the sections horizontally */
+      gap: 20px; /* Add space between sections */
+    }
+    
+    .house-rules-section, .health-safety-section, .cancellation-policy-section {
+      flex: 1; /* Make each section take up equal width */
+      padding: 10px;
+
+    }
+    
+    .house-rules-heading, .health-safety-heading, .cancellation-policy-heading {
+      font-size: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+    
+    .house-rules-list, .health-safety-list, .cancellation-policy-list {
+      list-style-type: none;
+      padding-left: 0;
+
+    }
+    
+    .house-rule-item, .health-safety-item, .cancellation-policy-item {
+      margin-bottom: 5px;
+    }
+    
+    .show-more-link {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    
+    .show-more-link:hover {
+      text-decoration: underline;
+    }
+    .things-to-know-heading {
+      display: flex; /* Use flexbox for horizontal layout */
+      justify-content: flex-start; /* Space out the sections */
+      flex-wrap: wrap;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 500;
+      color: #000000;
+    }
+
+
+    .explore-france {
+      margin: 250px 20px 20px;
+      width: 1440px; /* Adjust top margin to move it down */
+      height: 464px;
+      background-color: #e5e7eb;
+      gap: 32px;
+    }
+    
+    .explore-heading {
+      text-align: left; /* Change to center or right if needed */
+      font-size: 24px; /* Adjust font size */
+      margin-bottom: 16px;
+      margin: 30px 0px 0px 40px; /* Space below heading */
+      padding: 64px 160px 64px 160px;
+    }
+    
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+      gap: 10px; /* Space between grid items */
+    }
+    
+    .city-item {
+     
+      color: #4b5563;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;;
+      padding: 10px; /* Space inside each city item */
+      text-align: center; /* Center the city name */
+      
+      transition: background-color 0.3s; /* Transition for hover effect */
+    }
+    
+    .city-item:hover {
+      background-color: #e0e0e0; /* Change color on hover */
+    }
+    
+    .city-name {
+      font-weight: bold; /* Bold city names */
+    }
+    .stays-grid {
+      display: grid;                   /* Use CSS grid */
+      grid-template-columns: repeat(4, 1fr); /* Create 4 equal columns */
+      gap: 20px;                       /* Space between the grid items */
+      margin-top: 20px;               /* Space above the stays grid */
+    }
+    
+    .stay {
+   
+      padding: 15px;                  /* Space inside each stay item */
+      text-align: center;             /* Center the stay name */
+      border-radius: 5px;             /* Rounded corners */
+      transition: background-color 0.3s; /* Transition for hover effect */
+    }
+    
+    .stay:hover {
+      background-color: #e0e0e0;      /* Change color on hover */
+    }
+    .unique-stays {
+      text-align: left; /* Aligns text to the left */
+    }
+    .breadcrumb {
+      display: flex; /* Use flexbox for layout */
+      gap: 8px; /* Adjust space between items */
+      margin-top: 20px; /* Space above the breadcrumb */
+      margin-left: 100px;
+    }
+    
+    .breadcrumb span {
+      /* Optional: styles for breadcrumb items */
+      white-space: nowrap; /* Prevent line breaks */
+    }
+  .unique-stays-heading {
+   text-align: left;
+    margin-left: 40px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column; /* Change to column to stack sections vertically */
+    
+   width: 1140px;
+   height: 464px;
+    background-color: #efe7eb; /* Optional background color */
+    padding: 64px 160px 64px 160px;
+  }
+  
+  .footer-section {
+    display: flex; /* Keeps footer columns horizontally aligned */
+    justify-content: space-between; /* Spaces out the main sections */
+    margin-bottom: 20px; /* Adds space between the columns and footer rights */
+  }
+  
+  .footer-support,
+  .footer-community,
+  .footer-hosting,
+  .footer-about {
+    margin-right: 20px; /* Adds space between sections */
+  }
+  
+  .footer-rights {
+    display: flex;
+    flex-direction: column; /* Keeps terms and social media in a column */
+    align-items: flex-start; /* Aligns items to the right */
+  }
+  
+  .footer-terms,
+  .footer-social-media {
+    margin-top: 10px; /* Adds space between terms and social media */
+  }
+  

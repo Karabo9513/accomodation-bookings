@@ -1,0 +1,26 @@
+.Inspiration {
+    padding: 20px;
+  }
+  
+  .Inspiration-Title {
+    font-size: 36px;
+    font-weight: 500 bold;
+    margin-bottom: 20px;
+    height: 44px;
+    text-align: start;
+  }
+
+  .Card-Container {
+    display: flex; /* Enable Flexbox */
+    gap: 10px; /* Add space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    flex-wrap: wrap; /* Allow wrapping of cards on smaller screens */
+    margin-top: 80px;
+    justify-content: space-between;
+    border-radius: 8px;
+   
+  }
+
+  .title{
+    text-align: start;
+  }

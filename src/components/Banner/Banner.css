@@ -1,0 +1,17 @@
+.banner-image{
+    width: 1280px;
+    height: 640px;
+    border-radius: 8px;
+    padding: 60px;
+    gap: 24px;
+    border: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+}
+
+.banner{
+    background-color: black;
+    border: none;
+}

@@ -1,0 +1,85 @@
+.create-listing-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form-group-row .form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .form-group-row .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="button"] {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  input[type="file"] {
+    padding: 8px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .create-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  

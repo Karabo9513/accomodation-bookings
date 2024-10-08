@@ -1,0 +1,77 @@
+.header-bottom{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    background-color: black;
+   
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon */
+    width: 40px;  /* Set width */
+    height: 40px; /* Set height equal to width */
+    background-color: #DE3151; /* Pink background */
+    border-radius: 50%; /* Make it a circle */
+}
+
+
+
+.header-search{
+    display: flex;
+    gap: 40px;
+    padding: 8px 8px 8px 32px;
+    border: 1px solid #f1f1f1;
+    border-radius: 1000px;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffff;
+    width: 848px;
+    height: 50px;
+    gap: 32px;
+    justify-content: space-between;
+
+}
+
+.search-hotels{
+    padding-left: 20px;
+}
+
+.search-checkin, .search-checkout, .search-guests{
+   
+    padding: 0 0 0 20px;
+    font-size: 12px;
+}
+
+.search-button{
+    color: #6B7280;
+    font-size: 14px;
+    border: none;
+    background-color: #ffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.date-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+.location-dropdown {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.guest-dropdown {
+    margin-left: 10px;
+}
+
+.search-guests button {
+    margin: 0 5px;
+}
+

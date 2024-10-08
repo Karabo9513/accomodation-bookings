@@ -1,0 +1,72 @@
+/* Login.css */
+
+.login-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffff; /* Light background color */
+    border-radius: 8px;
+    justify-content: space-between;
+    height: 300px;
+    /* Shadow for a subtle effect */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 65px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: start;
+    line-height: 20px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #3a3a3a;
+    border-radius: 4px;
+
+    
+  }
+  
+  .form-group a {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  
+  .form-group a:hover {
+    text-decoration: underline;
+  }
+  
+  .submit-login {
+    width: 150px;
+    background-color: #007bff; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 55px;
+  }
+  
+  .submit-button button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+  }
+  

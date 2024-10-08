@@ -1,0 +1,64 @@
+.location-page {
+  padding: 20px;
+}
+
+.listing-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.listing-item {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+.listing-content {
+  display: flex;
+  width: 100%;
+}
+
+.listing-image {
+  width: 150px; /* Set the image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between the image and the text */
+  border-radius: 5px; /* Optional: for rounded corners */
+}
+
+.listing-details {
+  flex: 1; /* Allow the details to take the remaining space */
+}
+
+.location-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: red;
+}
+
+.no-listings-message {
+  color: grey;
+}
+
+.listing-name {
+  font-size: 20px;
+  margin: 0;
+}
+.listing-price-container {
+  margin-top: auto; /* Push the price to the bottom */
+  text-align: right; /* Align price text to the right */
+}
+
+.listing-description,
+.listing-details-text,
+.listing-type-location,
+.listing-price {
+  margin: 5px 0;
+}
+
+  

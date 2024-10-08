@@ -1,0 +1,148 @@
+.listings-container {  
+    width: 1440px; /* Fixed width */  
+    padding: 70px 40px 40px 40px; /* Add padding top to create space between header and container */  
+    gap: 24px; /* Gap between elements */  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    background-color: #ffff; /* Light background color */  
+    
+  }  
+    
+  .hotel-list-heading {  
+    align-self: flex-start; /* Align the heading to the start of the container */  
+    text-align: left; /* Left-align the heading */  
+    font-family: Inter; /* Font family */  
+    font-weight: 400; /* Font weight */  
+    font-size: 16px; /* Font size */  
+    line-height: 24px; /* Line height */  
+    color: #6b7280; /* Darker color for the heading */  
+    margin-bottom: 20px; /* Add some space between the heading and the listings */  
+  }
+  ul {  
+    list-style-type: none; /* Remove default list styling */  
+    padding: 0; /* Remove default padding */  
+  }  
+    
+  li {  
+    background-color: #fff; /* White background for each listing */  
+    margin: 10px 0; /* Space between listings */  
+    padding: 15px; /* Padding inside each listing */  
+     
+    transition: transform 0.2s; /* Animation for hover effect */  
+  }  
+    
+  .listing-item {  
+    display: flex;  
+    align-items: flex-start;
+    position: relative;  
+  }  
+    
+  .image-gallery {  
+    margin-right: 20px;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center; /* Center the buttons under the image */  
+  }  
+    
+  .image-gallery img {  
+    width: 300px; /* Set a width for images */  
+    height: 200px; /* Set a height for images */  
+    margin-bottom: 10px; /* Space between the image and buttons */  
+    border-radius: 12px;  
+   
+  }  
+    
+  .button-group {  
+    display: flex;  
+    flex-direction: column; /* Stack the buttons vertically */  
+    gap: 10px; /* Space between the buttons */  
+    width: 300px;
+    height: 44px; /* Ensure buttons span the width of the container */  
+    position: relative;
+    bottom: 20px;
+    padding-left: 10px;
+
+  }  
+    
+  .listing-content {  
+    flex-grow: 1; /* Allows the content to take up remaining space */  
+    padding-left: 20px; /* Add some space between the image and content */  
+    display: flex;  
+    flex-direction: column;  
+    align-items: flex-start;  
+  }  
+    
+  .listing-content p {  
+    margin-bottom: 10px; /* Add space between paragraphs */  
+  }  
+    
+  .update-button,  
+  .delete-button {  
+    width: 100%; /* Ensure the buttons take up the full width under the image */  
+  }  
+    
+  /* Button styles */  
+  .update-button {  
+    background-color: blue; /* Blue background for update button */  
+    color: white; /* White text */  
+    padding: 8px 12px; /* Padding for the button */  
+    border: none; /* No border */  
+    border-radius: 4px; /* Rounded corners */  
+    cursor: pointer; /* Pointer cursor on hover */  
+  }  
+    
+  .delete-button {  
+    background-color: #de3151; /* Pink background for delete button */  
+    color: white; /* White text */  
+    padding: 8px 12px; /* Padding for the button */  
+    border: none; /* No border */  
+    border-radius: 4px; /* Rounded corners */  
+    cursor: pointer; /* Pointer cursor on hover */  
+  }  
+    
+  /* Add hover effects for buttons */  
+  .update-button:hover {  
+    opacity: 0.8; /* Slightly transparent on hover */  
+  }  
+    
+  .delete-button:hover {  
+    opacity: 0.8; /* Slightly transparent on hover */  
+  }  
+    
+  .button-container {  
+    display: flex;  
+    justify-content: flex-start;  
+    align-self: flex-start;  
+    margin-bottom: 20px;  
+    text-align: left;  
+    border-bottom: 1px solid #f3f4f6; /* Add this line */  
+    padding-bottom: 30px;
+    width: 1392px;
+
+  }
+    
+  .button-container button {  
+    border: 1px solid #E5E7EB;  
+    padding: 10px 20px;  
+    background-color: #f0f0f0;  
+    color: #333;  
+    cursor: pointer;  
+    margin-right: 10px;  
+    font-family: Inter;  
+    font-weight: 400;  
+    font-size: 14px;  
+    line-height: 20px;  
+    border-radius: 100px;
+    background-color: #ffff;
+    text-align: left;
+  }  
+    
+  .button-container button:hover {  
+    background-color: #e0e0e0;  
+  }  
+    
+  .button-container button:last-child {  
+    margin-right: 0;  
+  }

@@ -1,0 +1,111 @@
+/* Container for the entire PreFooter section */
+.getaways {
+    background-color: #ffff; /* Light gray background */
+    padding: 20px;
+    text-align: center;
+    width: 1280px; /* Set width to 1280px */
+    margin: 0 auto; /* Center align horizontally */
+    border-bottom: 1px solid #000;
+}
+
+/* Container for the title section */
+.getaways-container {
+    margin-bottom: 20px;
+    width: 100%; /* Full width of the parent container */
+    text-align: left; /* Left align the title */
+}
+
+/* Title style */
+.getaways-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #000000; /* Dark gray color for the text */
+    margin: 0; /* Remove margin */
+}
+
+/* Container for the headings */
+.getaways-headings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    margin: 20px 0;
+    width: 100%; /* Full width of the parent container */
+    height: 24px;
+    border-bottom: 1px #f3f4f6;
+    text-align: left;
+}
+
+/* Style for each heading */
+.getaways-headings p {
+    color: #6B7280; /* Original gray text color */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    margin: 0;
+    position: relative; /* Needed for the pseudo-element */
+    transition: color 0.3s, border-bottom-color 0.3s; /* Smooth transition for color and line */
+}
+
+/* Hover effect */
+.getaways-headings p:hover {
+    color: #000; /* Black text on hover */
+}
+
+/* Adding a line below on hover */
+.getaways-headings p::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Position the line below the text */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Line height */
+    background-color: #6B7280; /* Line color matches the text color */
+    transform: scaleX(0); /* Initially hidden line */
+    transform-origin: left;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for the line */
+}
+
+/* Show the line on hover and change color to black */
+.getaways-headings p:hover::after {
+    transform: scaleX(1); /* Show the line on hover */
+    background-color: #000; /* Line color changes to black on hover */
+}
+
+/* Container for the places section */
+.getaways-places {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, each taking equal space */
+    gap: 40px;
+    width: 100%; /* Full width of the parent container */
+    box-sizing: border-box; /* Ensure padding and gaps are included in width */
+    padding: 0 20px; /* Optional: add horizontal padding to avoid content touching edges */
+}
+
+/* Style for each place */
+.getaways-place {
+    background-color: #ffff; /* White background for each place */
+    padding: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    column-gap: 80px; /* Include padding in element's width */
+}
+
+.getaways-place p {
+    margin: 0;
+    font-size: 18px;
+    
+}
+
+/* Style for the sub text section */
+.getaways-sub {
+    
+    color: #6b7280; /* White text color for contrast */
+    padding: 5px;
+    font-size: 14px;
+    width: 100%; /* Full width of the parent container */
+    margin: 0 auto; 
+    text-align: left;/* Center align horizontally */
+    
+}
+
