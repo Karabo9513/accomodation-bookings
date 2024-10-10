@@ -37,22 +37,18 @@ const [totalPrice, setTotalPrice] = useState(0);
 const [startDate, setStartDate] = useState(moment().toDate()); // Default to today's date
 const [endDate, setEndDate] = useState(moment().add(1, 'days').toDate()); // Default to tomorrow's date
 
-
-useEffect(() => {
-const fetchAccommodation = async () => {
-try {
-const response = await axios.get(`http://localhost:5000/api/accommodations/${id}`);
-setAccommodation(response.data);
-} catch (error) {
-console.error('Error fetching accommodation:', error);
-setError('Error fetching accommodation details.');
-} finally {
-setLoading(false);
-}
-};
-
-fetchAccommodation();
-}, [id]);
+useEffect(() => {  
+    const fetchAccommodation = async () => {  
+     try {  
+      const response = await axios.get(`http://localhost:5000/api/accommodations/${id}`);  
+      setAccommodation(response.data);  
+      console.log('Accommodation object set:', accommodation);  
+     } catch (error) {  
+      console.error('Error fetching accommodation:', error);  
+     }  
+    };  
+    fetchAccommodation();  
+  }, [id]);
 
 const calculateTotal = () => {
 if (!checkIn || !checkOut || !accommodation) {
@@ -86,13 +82,14 @@ return nights >= 7 ? (accommodation.price * 0.1 * nights) : 0;
 };
 
 const handleReserve = async () => {  
-    console.log('Accommodation object:', accommodation);
+    console.error('Accommodation object is null');
     console.log('Accommodation object:', accommodation);  
-    if (accommodation && accommodation.host_id) {  
+    if (accommodation && accommodation.host_id) {
+     const hostId = accommodation.host_id;  
      const reservationDetails = {  
       accommodation: accommodation._id,  
       user: username,  
-      hostId: accommodation.host_id,
+      hostId,  
       checkIn,  
       checkOut,  
      };  
@@ -128,42 +125,43 @@ const handleReserve = async () => {
       alert('Error making reservation. Please try again.');  
      }  
     } else {  
-     console.error('Host is not defined');  
-     return;  
+     console.error('Host ID is not defined');  
+     // Handle the error case  
     }  
   };
 
 const weeklyDiscount = calculateWeeklyDiscount();
 return (
 <div className="location-details">
-<h1 className="accommodation-name">{accommodation.name}</h1>
-<p className="host-info">Hosted by: {accommodation.host ? accommodation.host.username : 'Unknown Host'}</p>
-<div className="accommodation-image-gallery">
-<img
-key={0}
-className="main-image"
-src={`http://localhost:5000${accommodation.images[0]}`}
-alt="Main Image"
-/>
-<div className="thumbnail-container">
-{accommodation.images.slice(1, 3).map((image, index) => (
-<img
-key={index + 1}
-className="thumbnail-image"
-src={`http://localhost:5000${image}`}
-alt={`Thumbnail ${index + 1}`}
-/>
-))}
-{accommodation.images.slice(3).map((image, index) => (
-<img
-key={index + 3}
-className="thumbnail-image"
-src={`http://localhost:5000${image}`}
-alt={`Thumbnail ${index + 3}`}
-/>
-))}
-</div>
-</div>
+{accommodation && (  
+  <div className="accommodation-image-gallery">  
+   <img  
+    key={0}  
+    className="main-image"  
+    src={`http://localhost:5000${accommodation.images[0]}`}  
+    alt="Main Image"  
+   />  
+   <div className="thumbnail-container">  
+    {accommodation.images.slice(1, 3).map((image, index) => (  
+      <img  
+       key={index + 1}  
+       className="thumbnail-image"  
+       src={`http://localhost:5000${image}`}  
+       alt={`Thumbnail ${index + 1}`}  
+      />  
+    ))}  
+    {accommodation.images.slice(3).map((image, index) => (  
+      <img  
+       key={index + 3}  
+       className="thumbnail-image"  
+       src={`http://localhost:5000${image}`}  
+       alt={`Thumbnail ${index + 3}`}  
+      />  
+    ))}  
+   </div>  
+  </div>  
+)}
+
 
 <div className="accommodation-header">
     
@@ -195,11 +193,22 @@ alt={`Thumbnail ${index + 3}`}
 <span className="feature-name"></span>
 
 </div>
-<p className="accommodation-description">Description: {accommodation.description}</p>
-<p className="room-bath-info">Rooms: {accommodation.rooms} | Baths: {accommodation.baths}</p>
-<p className="type-location-info">Type: {accommodation.type} | Location: {accommodation.location}</p>
-<p className="amenities-info">Amenities: {accommodation.amenities.join(', ')}</p>
-<p className="price-info">Price: ${accommodation.price} | Guests: {accommodation.guests}</p>
+{accommodation && (  
+  <p className="accommodation-description">Description: {accommodation.description}</p>  
+)}
+{accommodation && (  
+  <p className="room-bath-info">Rooms: {accommodation.rooms} | Baths: {accommodation.baths}</p>  
+)}{accommodation && (  
+    <p className="type-location-info">Type: {accommodation.type} | Location: {accommodation.location}</p>  
+  )}
+
+{accommodation && accommodation.amenities && (  
+  <p className="amenities-info">Amenities: {accommodation.amenities.join(', ')}</p>  
+)}  
+  
+{accommodation && (  
+  <p className="price-info">Price: ${accommodation.price} | Guests: {accommodation.guests}</p>  
+)}
 
 <div classsName="sleep">
     <p className="where">Where you'll sleep</p>

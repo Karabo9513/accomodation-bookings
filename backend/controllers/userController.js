@@ -1,5 +1,5 @@
 const User = require('../models/User'); // Import User model
-const bcrypt = require('bcrypt'); // Import bcrypt for password hashing
+const bcryptjs = require('bcryptjs'); // Import bcrypt for password hashing
 const jwt = require('jsonwebtoken'); // Import jsonwebtoken
 
 // Register a new user
@@ -20,7 +20,7 @@ exports.register = async (req, res) => {
         }
 
         // Hash the password
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const hashedPassword = await bcryptjs.hash(password, 10);
 
         // Create a new user
         const newUser = new User({ username, password: hashedPassword, role });
@@ -71,7 +71,7 @@ exports.login = async (req, res) => {
             return res.status(401).json({ message: 'Invalid username or password' });
         }
 
-        const passwordMatch = await bcrypt.compare(password, user.password);
+        const passwordMatch = await bcryptjs.compare(password, user.password);
         if (!passwordMatch) {
             return res.status(401).json({ message: 'Invalid username or password' });
         }

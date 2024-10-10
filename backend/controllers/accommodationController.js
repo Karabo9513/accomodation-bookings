@@ -50,12 +50,17 @@ exports.searchAccommodationsByLocation = async (req, res) => {
 
 exports.getAccommodationById = async (req, res) => {  
     try {  
-     const accommodation = await Accommodation.findById(req.params.id).populate('host_id', ['name', '_id']); // Populate host name and _id  
-     console.log('Accommodation object:', accommodation); // Log the accommodation object  
+     const accommodation = await Accommodation.findById(req.params.id).populate('host_id');  
      if (!accommodation) {  
       return res.status(404).json({ message: 'Accommodation not found' });  
      }  
-     res.status(200).json(accommodation);  
+     if (accommodation.host_id) {  
+      // host_id is defined, proceed with the code  
+      res.status(200).json(accommodation);  
+     } else {  
+      // host_id is not defined, handle the error  
+      res.status(500).json({ message: 'Host is not defined' });  
+     }  
     } catch (error) {  
      res.status(500).json({ message: 'Error fetching accommodation', error: error.message });  
     }  

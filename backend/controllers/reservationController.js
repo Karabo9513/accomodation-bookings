@@ -2,39 +2,27 @@ const Reservation = require('../models/Reservation');
 const User = require('../models/User'); // Import the User model to fetch usernames  
   
 exports.createReservation = async (req, res) => {  
-  console.log('Request body:', req.body); 
-  const { accommodation, checkIn, checkOut } = req.body; // Assuming accommodation is the property name in your schema  
-  const username = req.user.username; // Ensure you're retrieving the username from the authenticated user  
+  console.log('Request body:', req.body);  
+  const { accommodation, checkIn, checkOut } = req.body;  
+  const username = req.user.username;  
   const hostId = req.body.accommodation.hostId;  
   
-  // Validate required fields  
-  if (!accommodation || !checkIn || !checkOut || !username) {  
-   return res.status(400).json({ message: 'Missing required fields' });  
-  }  
-  
   try {  
-   // Create a new reservation instance  
    const reservation = await Reservation.create({  
-    property: accommodation, // Use 'accommodation' or another variable if needed  
+    property: accommodation,  
     checkIn,  
     checkOut,  
-    username, // Store the username from the authenticated user  
+    username,  
+    hostId,  
    });  
-  
-   // Update host's reservations array  
-   const host = await User.findById(hostId);  
-   if (host) {  
-    host.reservations.push(reservation._id);  
-    await host.save();  
-   }  
-  
+   console.log('Reservation created:', reservation);  
    res.status(201).json(reservation);  
   } catch (error) {  
-   console.error("Error saving reservation:", error);  
-   return res.status(500).json({ message: 'Failed to create reservation' });  
+   console.error('Error creating reservation:', error);  
+   console.log('Error message:', error.message);  
+   res.status(500).json({ message: 'Failed to create reservation' });  
   }  
-};  
-  
+};
 // Get all reservations for a specific user  
 exports.getUserReservations = async (req, res) => {  
   const username = req.user.username; // Use authenticated user's username  
